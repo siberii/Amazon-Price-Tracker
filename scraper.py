@@ -36,14 +36,14 @@ def send_email(title, price):
     server.starttls()
     server.ehlo()
 
-    server.login("simon7g7@gmail.com", "sbdkribhhsidwmig")
+    server.login("enter@email.here", "enterpasswordhere")
 
     subject = "Price went down!"
     body = f"{title} went down to {price}$! Check the amazon link: {URL}"
 
     msg = f"Subject: {subject}\n\n{body}"
     server.sendmail(
-        "simon7g7@gmail.com", "oiosimonoio@gmail.com", msg.encode('ascii')
+        "enter@sender.here", "enter@receiver.here", msg
     )
     print("EMAIL HAS BEEN SENT!")
 
